@@ -13,15 +13,5 @@ public:
 	Database();
 
 private:
-	void createTables(DB::Session* session)
-	{
-		try
-		{
-			session->execute("CREATE TABLE " + config.TABLE_PREFIX + "block(INT test)");
-		}
-		catch (std::exception ex)
-		{
-			logger.error << ex.what() << logger.endl;
-		}
-	}
+	void createTables(DB::Session* session);
 };
