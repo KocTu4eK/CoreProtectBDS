@@ -1,6 +1,6 @@
 #pragma once
 #include "../pch.h"
-#define WLINK L"https://drive.google.com/u/0/uc?id=1kvA5EIeJf-ViSJH3Hsvbx17q-agy82rs&export=download"
+#define WLINK L"https://raw.githubusercontent.com/KocTu4eK/CoreProtectBDS/main/config/config.yml"
 #define PATH "./plugins/CoreProtect/config.yml"
 #define WPATH L"./plugins/CoreProtect/config.yml"
 
@@ -9,7 +9,8 @@ class Config
 	YAML::Node ymlConfig;
 
 public:
-	Config();
+	void initialize();
+
 	std::string DONATION_KEY;
 	bool USE_MYSQL;
 	std::string TABLE_PREFIX;

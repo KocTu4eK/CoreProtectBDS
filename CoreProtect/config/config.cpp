@@ -1,7 +1,7 @@
 #include "../pch.h"
 #include "config.h"
 
-Config::Config()
+void Config::initialize()
 {
 	try { ymlConfig = YAML::LoadFile(PATH); }
 	catch (YAML::Exception) {

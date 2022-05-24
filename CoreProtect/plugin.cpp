@@ -8,4 +8,6 @@ Database database;
 
 void plugin()
 {
+	config.initialize();
+	database.initialize();
 }

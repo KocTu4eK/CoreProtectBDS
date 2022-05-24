@@ -1,7 +1,7 @@
 #include "../pch.h"
 #include "database.h"
 
-Database::Database()
+void Database::initialize()
 {
 	if (!config.USE_MYSQL)
 	{

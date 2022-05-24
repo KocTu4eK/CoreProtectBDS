@@ -10,7 +10,7 @@ class Database
 	std::string const path = "./plugins/CoreProtect/database.db";
 	
 public:
-	Database();
+	void initialize();
 
 private:
 	void createTables(DB::Session* session);
