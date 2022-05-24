@@ -7,5 +7,6 @@
 #include <Global.h>
 #include <LLAPI.h>
 #include <yaml-cpp/yaml.h>
+#include <DB/Session.h>
 
 #endif //PCH_H

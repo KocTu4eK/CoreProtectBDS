@@ -4,7 +4,6 @@
 #pragma comment(lib, "../LLoaderSDK/Lib/SymDBHelper.lib")
 #pragma comment(lib, "../LLoaderSDK/Lib/LiteLoader.lib")
 #pragma comment(lib, "../LLoaderSDK/Lib/yaml-cpp.lib")
-#pragma comment(lib, "urlmon.lib")
 
 BOOL APIENTRY DllMain(HMODULE hModule,  DWORD  ul_reason_for_call, LPVOID lpReserved)
 {
