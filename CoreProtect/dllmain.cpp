@@ -11,7 +11,8 @@ BOOL APIENTRY DllMain(HMODULE hModule,  DWORD  ul_reason_for_call, LPVOID lpRese
     {
     case DLL_PROCESS_ATTACH:
         LL::registerPlugin("CoreProtect", "Unofficial port of CoreProtect plugin to Minecraft Bedrock", LL::Version(0, 0, 1));
-        break;
+		std::filesystem::create_directory("./plugins/CoreProtect");
+		break;
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:

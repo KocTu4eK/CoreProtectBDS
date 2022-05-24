@@ -3,12 +3,12 @@
 
 void Config::initialize()
 {
-	try { ymlConfig = YAML::LoadFile(PATH); }
+	try { ymlConfig = YAML::LoadFile(CONFIG_PATH); }
 	catch (YAML::Exception) {
 		try
 		{
-			URLDownloadToFileW(0, WLINK, WPATH, 0, 0);
-			ymlConfig = YAML::LoadFile(PATH);
+			URLDownloadToFileW(0, CONFIG_WLINK, CONFIG_WPATH, 0, 0);
+			ymlConfig = YAML::LoadFile(CONFIG_PATH);
 		}
 		catch (std::exception) {}
 	}
@@ -60,6 +60,19 @@ void Config::initialize()
 	PLAYER_SESSIONS = getBoolean("player-sessions", true);
 	USERNAME_CHANGES = getBoolean("username-changes", true);
 	WORLDEDIT = getBoolean("worldedit", true);
+
+	if (!std::filesystem::exists(LANG_PATH)) URLDownloadToFileW(0, L"https://raw.githubusercontent.com/PlayPro/CoreProtect/master/lang/en.yml", LANG_WPATH, 0, 0);
+	std::ifstream fin(LANG_PATH);
+	std::string line;
+	std::getline(fin, line);
+	fin.close();
+	if (line != "# CoreProtect Language File (" + LANGUAGE + ")")
+	{
+		std::string link = "https://raw.githubusercontent.com/PlayPro/CoreProtect/master/lang/" + LANGUAGE + ".yml";
+		try { URLDownloadToFileW(0, std::wstring(link.begin(), link.end()).c_str(), LANG_WPATH, 0, 0); }
+		catch (std::exception) {}
+	}
+	// Translation::load("./plugins/CoreProtect/language.json");
 }
 
 bool Config::getBoolean(std::string const key, bool const default_value)

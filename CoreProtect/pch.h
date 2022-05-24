@@ -3,6 +3,7 @@
 
 #include <windows.h>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <Global.h>
 #include <LLAPI.h>

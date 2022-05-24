@@ -1,8 +1,10 @@
 #pragma once
 #include "../pch.h"
-#define WLINK L"https://raw.githubusercontent.com/KocTu4eK/CoreProtectBDS/main/config/config.yml"
-#define PATH "./plugins/CoreProtect/config.yml"
-#define WPATH L"./plugins/CoreProtect/config.yml"
+#define CONFIG_WLINK L"https://raw.githubusercontent.com/KocTu4eK/CoreProtectBDS/main/config/config.yml"
+#define CONFIG_PATH "./plugins/CoreProtect/config.yml"
+#define CONFIG_WPATH L"./plugins/CoreProtect/config.yml"
+#define LANG_PATH "./plugins/CoreProtect/language.yml"
+#define LANG_WPATH L"./plugins/CoreProtect/language.yml"
 
 class Config
 {
