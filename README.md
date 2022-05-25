@@ -1,3 +1,4 @@
 # CoreProtectBDS  
-### I'm finally back to porting the plugin! I decided to start from scratch because the old project was f*cked up of my stupidity. Now I will try not to write shit and not abandon the development!  
-Sorry for my bad English, I'm Russian and I wrote this through a translator, so I can't convey my thoughts correctly.
+### I'm finally back to porting the plugin! Now I will try not to tilt and not to abandon the development.
+-----
+### Я наконец возвращаюсь к портированию плагина! Теперь буду стараться не тильтовать и не забрасывать разработку.
