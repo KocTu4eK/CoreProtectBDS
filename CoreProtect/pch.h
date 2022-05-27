@@ -8,6 +8,6 @@
 #include <Global.h>
 #include <LLAPI.h>
 #include <yaml-cpp/yaml.h>
-#include <DB/Session.h>
+#include <SQLiteCpp/SQLiteCpp.h>
 
 #endif //PCH_H

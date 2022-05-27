@@ -1,24 +1,31 @@
 #include "../pch.h"
 #include "database.h"
 
-void Database::initialize()
+void Database::execute(const std::string query, std::function<void(SQLite::Statement& stmt)> callback = NULL)
 {
 	if (!config.USE_MYSQL)
 	{
-		session = DB::Session::create(DB::DBType::SQLite, path);
-		createTables(session.get());
+		if (callback != NULL)
+		{
+			SQLite::Statement stmt(db, query);
+			callback(stmt);
+		}
+		else db.exec(query);
 	}
-	else {}
 }
 
-void Database::createTables(DB::Session* session)
+void Database::createTables()
 {
-	try
+
+	if (!config.USE_MYSQL)
 	{
-		session->execute("CREATE TABLE " + config.TABLE_PREFIX + "block(INT test)");
-	}
-	catch (std::exception ex)
-	{
-		logger.error << ex.what() << logger.endl;
+		try
+		{
+			if (!config.DISABLE_WAL) db.exec("PRAGMA journal_mode=WAL");
+			db.exec("CREATE TABLE IF NOT EXISTS " + config.TABLE_PREFIX + "art_map(id INT, art TEXT)");
+			db.exec("CREATE TABLE IF NOT EXISTS " + config.TABLE_PREFIX + "block(time INT, user INT, wid INT, x INT, y INT, z INT, type INT, data INT, meta BLOB, blockdata BLOB, action INT, rolled_back INT)");
+			db.exec("CREATE TABLE IF NOT EXISTS " + config.TABLE_PREFIX + "user(id INT PRIMARY KEY ASC, time INT, user TEXT, i INT)");
+		}
+		catch (SQLite::Exception ex) { logger.error << ex.what() << logger.endl; }
 	}
 }
