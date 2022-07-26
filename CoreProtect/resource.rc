@@ -1,0 +1,5 @@
+#include "resource.h"
+#include "winres.h"
+
+// NAME TYPE "PATH"
+EN_US YAML "en_US.yml"
