@@ -1,4 +1,5 @@
 #include "pch.h"
+#include "resource.h"
 #include "database/database.h"
 
 Logger logger("CoreProtect");
