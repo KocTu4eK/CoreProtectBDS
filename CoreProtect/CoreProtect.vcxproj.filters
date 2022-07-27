@@ -12,6 +12,12 @@
     <Filter Include="Файлы ресурсов">
       <UniqueIdentifier>{b0f0f3ea-7f29-4508-b43a-95852a39137f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\database">
+      <UniqueIdentifier>{24e64b15-92d2-4077-9edf-943932426c9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\database">
+      <UniqueIdentifier>{3c59b40a-f9e5-49c0-a837-3d2a7a4a1715}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -20,12 +26,21 @@
     <ClInclude Include="resource.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="database\database.h">
+      <Filter>Файлы заголовков\database</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="database\database.cpp">
+      <Filter>Исходные файлы\database</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
