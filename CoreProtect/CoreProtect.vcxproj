@@ -255,7 +255,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='LiteLoader|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="plugin.cpp" />
-    <ClCompile Include="utility\utility.cpp" />
+    <ClCompile Include="utility\utility.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='LiteLoader|x64'">../pch.h</PrecompiledHeaderFile>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />
