@@ -1,14 +1,12 @@
-#define CONFIG 1
-
-#define DE 2
-#define EN 3
-#define ES 4
-#define FR 5
-#define JA 6
-#define PL 7
-#define RU 8
-#define TR 9
-#define UK 10
-#define VI 11
-#define ZH_CN 12
-#define ZH_TW 13
+#define DE 1
+#define EN 2
+#define ES 3
+#define FR 4
+#define JA 5
+#define PL 6
+#define RU 7
+#define TR 8
+#define UK 9
+#define VI 10
+#define ZH_CN 11
+#define ZH_TW 12

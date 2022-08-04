@@ -1,12 +1,13 @@
 #include "pch.h"
 #include "resource.h"
+#include "config/config.h"
 #include "database/database.h"
 
 Logger logger("CoreProtect");
-// Config config;
+Config config;
 Database database;
 
 void pluginInit()
 {
-	database.createTables("co_"); // config.TABLE_PREFIX
+	database.createTables(config.TABLE_PREFIX);
 }

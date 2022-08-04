@@ -24,6 +24,12 @@
     <Filter Include="Исходные файлы\utility">
       <UniqueIdentifier>{6c5e270b-01b9-4cf9-8524-3ca51b6e22d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\config">
+      <UniqueIdentifier>{655fadc1-2ed6-4edf-992d-461080c77243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\config">
+      <UniqueIdentifier>{f982cbfc-d4e0-4adb-b93c-0479eb738c37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -37,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="utility\utility.h">
       <Filter>Файлы заголовков\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="config\config.h">
+      <Filter>Файлы заголовков\config</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -54,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="utility\utility.cpp">
       <Filter>Исходные файлы\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="config\config.cpp">
+      <Filter>Исходные файлы\config</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

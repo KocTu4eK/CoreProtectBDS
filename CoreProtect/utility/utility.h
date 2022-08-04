@@ -6,6 +6,5 @@ extern Logger logger;
 
 namespace Utility
 {
-	void createConfig();
-	void createLang(const std::string lang);
+	//int createLanguage(std::string language);
 }
