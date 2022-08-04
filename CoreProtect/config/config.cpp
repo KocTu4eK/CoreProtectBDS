@@ -66,7 +66,6 @@ bool Config::initBoolean(const std::string key, const bool defaultValue, const s
 	catch (YAML::Exception)
 	{
 		if (key == "enable-awe" || key == "disable-wal" || key == "hover-events" || key == "database-lock" || key == "log-cancelled-chat" || key == "hopper-filter-meta" || key == "exclude-tnt" || key == "network-debug") return defaultValue;
-		logger.info << "initBoolean catch: " << key << logger.endl;
 		std::ifstream fin("./plugins/CoreProtect/config.yml");
 		std::ofstream fout("./plugins/CoreProtect/config.yml", std::ios::app);
 
@@ -88,7 +87,6 @@ int Config::initInt(const std::string key, const int defaultValue, const std::st
 	try { return config[key].as<int>(); }
 	catch (YAML::Exception)
 	{
-		logger.info << "initInt catch" << logger.endl;
 		std::ifstream fin("./plugins/CoreProtect/config.yml");
 		std::ofstream fout("./plugins/CoreProtect/config.yml", std::ios::app);
 
@@ -115,7 +113,6 @@ std::string Config::initString(const std::string key, const std::string defaultV
 	}
 	catch (YAML::Exception)
 	{
-		logger.info << "initString catch" << logger.endl;
 		std::ifstream fin("./plugins/CoreProtect/config.yml");
 		std::ofstream fout("./plugins/CoreProtect/config.yml", std::ios::app);
 
@@ -133,6 +130,7 @@ std::string Config::initString(const std::string key, const std::string defaultV
 
 void Config::initConfig()
 {
+	std::filesystem::create_directory("./plugins/CoreProtect");
 	std::ofstream openCreate("./plugins/CoreProtect/config.yml", std::ios::app);
 	openCreate.close();
 	config = YAML::LoadFile("./plugins/CoreProtect/config.yml");
