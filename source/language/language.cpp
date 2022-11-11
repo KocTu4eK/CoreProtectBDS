@@ -1,5 +1,9 @@
 #include "language/language.h"
 
+tbb::concurrent_hash_map<Phrases, std::string> Language::phrases;
+tbb::concurrent_hash_map<Phrases, std::string> Language::userPhrases;
+tbb::concurrent_hash_map<Phrases, std::string> Language::translatedPhrases;
+
 void Language::loadPhrases()
 {
 	phrases.insert({ Phrases::ACTION_NOT_SUPPORTED, "That action is not supported by the command." });
