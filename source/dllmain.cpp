@@ -1,4 +1,7 @@
 #include "pch.h"
+#ifdef CP_TEST
+#include "main.hpp"
+#endif
 
 Logger logger("CoreProtect");
 
@@ -30,6 +33,10 @@ extern "C" _declspec(dllexport) void onPostInit()
 {
 	std::ios::sync_with_stdio(false);
 	checkProtocolVersion();
+
+#ifdef CP_TEST
+	runTests();
+#endif
 
 	logger.info("Hello, World!");
 }

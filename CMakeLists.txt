@@ -4,9 +4,21 @@ project(CoreProtect)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_BUILD_TYPE Release)
 
+option(CP_TESTS "Run CoreProtect tests on plugin load")
+if (CP_TESTS)
+	message("-- Tests enabled")
+	add_compile_definitions(CP_TESTS)
+	set(TESTS_SOURCE_DIR
+		${PROJECT_SOURCE_DIR}/tests/main.hpp
+	)
+	set(TESTS_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/tests)
+endif(CP_TESTS)
+unset(CP_TESTS CACHE)
+
 include_directories(
     ${CMAKE_SOURCE_DIR}/third-party/include
     ${CMAKE_SOURCE_DIR}/include
+    ${TESTS_INCLUDE_DIR}
 )
 
 link_directories(${CMAKE_SOURCE_DIR}/third-party/lib)
@@ -69,6 +81,8 @@ add_library(CoreProtect SHARED
     ${PROJECT_SOURCE_DIR}/source/utility/color.cpp
     ${PROJECT_SOURCE_DIR}/source/utility/util.cpp
     ${PROJECT_SOURCE_DIR}/source/dllmain.cpp
+
+	${TESTS_SOURCE_DIR}
 )
 
 target_link_libraries(CoreProtect 
