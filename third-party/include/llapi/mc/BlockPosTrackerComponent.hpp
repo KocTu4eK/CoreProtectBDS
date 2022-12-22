@@ -32,12 +32,12 @@ public:
 public:
     /**
      * @symbol ??0BlockPosTrackerComponent@@QEAA@_NAEBVBlockPos@@@Z
-     * @hash   998155168
+     * @hash   1514711888
      */
     MCAPI BlockPosTrackerComponent(bool, class BlockPos const &);
     /**
      * @symbol ?onRemove@BlockPosTrackerComponent@@QEAAXAEAVActor@@@Z
-     * @hash   -1751598806
+     * @hash   -1235042086
      */
     MCAPI void onRemove(class Actor &);
 

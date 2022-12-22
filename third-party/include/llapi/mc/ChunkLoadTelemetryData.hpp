@@ -33,12 +33,12 @@ public:
 public:
     /**
      * @symbol ?recordLoadedChunk@ChunkLoadTelemetryData@@QEAAXAEBVLevelChunk@@@Z
-     * @hash   -245665432
+     * @hash   271183432
      */
     MCAPI void recordLoadedChunk(class LevelChunk const &);
     /**
      * @symbol ?toJson@ChunkLoadTelemetryData@@QEBA?AVValue@Json@@XZ
-     * @hash   151335792
+     * @hash   668184656
      */
     MCAPI class Json::Value toJson() const;
 

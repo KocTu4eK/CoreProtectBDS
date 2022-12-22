@@ -30,7 +30,7 @@ public:
 public:
     /**
      * @symbol ??1AsyncStateRef@@QEAA@XZ
-     * @hash   1268208938
+     * @hash   1781352186
      */
     MCAPI ~AsyncStateRef();
 

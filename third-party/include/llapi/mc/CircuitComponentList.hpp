@@ -20,7 +20,7 @@ class CircuitComponentList {
 
 #define AFTER_EXTRA
 // Add Member There
-
+public: class Item {};
 #undef AFTER_EXTRA
 #ifndef DISABLE_CONSTRUCTOR_PREVENTION_CIRCUITCOMPONENTLIST
 public:
@@ -32,12 +32,12 @@ public:
 public:
     /**
      * @symbol ?removeSource@CircuitComponentList@@QEAA_NAEBVBlockPos@@PEBVBaseCircuitComponent@@@Z
-     * @hash   837900785
+     * @hash   1407397073
      */
     MCAPI bool removeSource(class BlockPos const &, class BaseCircuitComponent const *);
     /**
      * @symbol ??1CircuitComponentList@@QEAA@XZ
-     * @hash   379235228
+     * @hash   -807161556
      */
     MCAPI ~CircuitComponentList();
 

@@ -179,10 +179,10 @@ public:
 };
 
 #ifdef UNICODE
-#include <compact_enc_det/util/encodings/encodings.h>
+#include <compact_enc_det/compact_enc_det.h>
 #define UNICODE
 #else
-#include <compact_enc_det/util/encodings/encodings.h>
+#include <compact_enc_det/compact_enc_det.h>
 #endif
 
 namespace Translation {

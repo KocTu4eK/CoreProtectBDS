@@ -32,42 +32,42 @@ public:
 public:
     /**
      * @symbol ?edit@CompoundTagUpdaterBuilder@@QEAAAEAV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$QEAV?$function@$$A6AXAEAVCompoundTagEditHelper@@@Z@3@@Z
-     * @hash   172898763
+     * @hash   692023275
      */
     MCAPI class CompoundTagUpdaterBuilder & edit(std::string const &, class std::function<void (class CompoundTagEditHelper &)> &&);
     /**
      * @symbol ?match@CompoundTagUpdaterBuilder@@QEAAAEAV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z
-     * @hash   1039548090
+     * @hash   1558672602
      */
     MCAPI class CompoundTagUpdaterBuilder & match(std::string const &, std::string);
     /**
      * @symbol ?matchLiteral@CompoundTagUpdaterBuilder@@QEAAAEAV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V23@@Z
-     * @hash   -1000394270
+     * @hash   -481285134
      */
     MCAPI class CompoundTagUpdaterBuilder & matchLiteral(std::string const &, std::string);
     /**
      * @symbol ?popVisit@CompoundTagUpdaterBuilder@@QEAAAEAV1@XZ
-     * @hash   -254095284
+     * @hash   265013852
      */
     MCAPI class CompoundTagUpdaterBuilder & popVisit();
     /**
      * @symbol ?remove@CompoundTagUpdaterBuilder@@QEAAAEAV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
-     * @hash   1291280181
+     * @hash   1810389317
      */
     MCAPI class CompoundTagUpdaterBuilder & remove(std::string const &);
     /**
      * @symbol ?rename@CompoundTagUpdaterBuilder@@QEAAAEAV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z
-     * @hash   2044118307
+     * @hash   -1731739853
      */
     MCAPI class CompoundTagUpdaterBuilder & rename(std::string const &, std::string const &);
     /**
      * @symbol ?tryEdit@CompoundTagUpdaterBuilder@@QEAAAEAV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$QEAV?$function@$$A6AXAEAVCompoundTagEditHelper@@@Z@3@@Z
-     * @hash   622114761
+     * @hash   1141223897
      */
     MCAPI class CompoundTagUpdaterBuilder & tryEdit(std::string const &, class std::function<void (class CompoundTagEditHelper &)> &&);
     /**
      * @symbol ?visit@CompoundTagUpdaterBuilder@@QEAAAEAV1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
-     * @hash   -135829497
+     * @hash   383279639
      */
     MCAPI class CompoundTagUpdaterBuilder & visit(std::string const &);
 

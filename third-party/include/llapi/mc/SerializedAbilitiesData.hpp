@@ -8,7 +8,7 @@
 #include "../Global.h"
 
 #define BEFORE_EXTRA
-
+#include "LayeredAbilities.hpp"
 #undef BEFORE_EXTRA
 
 /**
@@ -18,7 +18,8 @@
 struct SerializedAbilitiesData {
 
 #define AFTER_EXTRA
-
+    ActorUniqueID mUid;
+    LayeredAbilities mAbilities;
 #undef AFTER_EXTRA
 #ifndef DISABLE_CONSTRUCTOR_PREVENTION_SERIALIZEDABILITIESDATA
 public:
@@ -29,27 +30,27 @@ public:
 public:
     /**
      * @symbol ??0SerializedAbilitiesData@@QEAA@XZ
-     * @hash   754705146
+     * @hash   681638394
      */
     MCAPI SerializedAbilitiesData();
     /**
      * @symbol ??0SerializedAbilitiesData@@QEAA@UActorUniqueID@@AEBVLayeredAbilities@@@Z
-     * @hash   2121434130
+     * @hash   2048367378
      */
     MCAPI SerializedAbilitiesData(struct ActorUniqueID, class LayeredAbilities const &);
     /**
      * @symbol ?fillIn@SerializedAbilitiesData@@QEBAXAEAVLayeredAbilities@@@Z
-     * @hash   1646359332
+     * @hash   1573292580
      */
     MCAPI void fillIn(class LayeredAbilities &) const;
     /**
      * @symbol ?getTargetPlayer@SerializedAbilitiesData@@QEBA?AUActorUniqueID@@XZ
-     * @hash   -877211724
+     * @hash   -950278476
      */
     MCAPI struct ActorUniqueID getTargetPlayer() const;
     /**
      * @symbol ??1SerializedAbilitiesData@@QEAA@XZ
-     * @hash   1745958682
+     * @hash   1926595930
      */
     MCAPI ~SerializedAbilitiesData();
 

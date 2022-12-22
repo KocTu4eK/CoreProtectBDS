@@ -29,12 +29,12 @@ public:
 public:
     /**
      * @symbol ??0PackMetadata@@QEAA@XZ
-     * @hash   224731700
+     * @hash   747085172
      */
     MCAPI PackMetadata();
     /**
      * @symbol ??0PackMetadata@@QEAA@V?$unique_ptr@UEducationMetadata@@U?$default_delete@UEducationMetadata@@@std@@@std@@@Z
-     * @hash   -1193809855
+     * @hash   -671456383
      */
     MCAPI PackMetadata(std::unique_ptr<struct EducationMetadata>);
 
