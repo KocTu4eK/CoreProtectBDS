@@ -1,7 +1,4 @@
-#include "pch.h"
-#ifdef CP_TEST
-#include "main.hpp"
-#endif
+#include "llapi/LoggerAPI.h"
 
 Logger logger("CoreProtect");
 
@@ -22,9 +19,9 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 
 void checkProtocolVersion()
 {
-	if (ll::getServerProtocolVersion() != 545)
+	if (ll::getServerProtocolVersion() != 560)
 	{
-		logger.warn("Protocol version mismatched! Target version: {}. Current version: {}.", 545, ll::getServerProtocolVersion());
+		logger.warn("Protocol version mismatched! Target version: 560. Current version: {}.", ll::getServerProtocolVersion());
 		logger.warn("This may result in crash. Please switch to the version matching the BDS version!");
 	}
 }
@@ -33,10 +30,6 @@ extern "C" _declspec(dllexport) void onPostInit()
 {
 	std::ios::sync_with_stdio(false);
 	checkProtocolVersion();
-
-#ifdef CP_TEST
-	runTests();
-#endif
 
 	logger.info("Hello, World!");
 }
